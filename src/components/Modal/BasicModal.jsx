@@ -12,7 +12,7 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 400,
-  bgcolor: 'background.paper',
+  bgcolor: "orange",
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
@@ -26,7 +26,7 @@ export default function BasicModel({open, setOpen}) {
   console.log("dentro do close")
 };
   // modal
-  console.log(open + "estamos dentro do modal")
+  console.log(open + " estamos dentro do modal")
 
   return (
     <div>

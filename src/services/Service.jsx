@@ -1,7 +1,12 @@
-import Axios from "axios";
+import axios from "axios";
 
 const API_URL =
   "http://api.teste-frontend.ateliedepropaganda.com.br/v1/register";
+
+
+export const api = axios.create({
+    baseURL: 'http://api.teste-frontend.ateliedepropaganda.com.br/v1/register'
+})
 
 //campos do formulario
 
@@ -14,7 +19,7 @@ export const register = (
   company,
   segment
 ) => {
-  return Axios.post(API_URL, {
+  return axios.post(API_URL, {
     name,
     email,
     tax_id,
@@ -26,14 +31,14 @@ export const register = (
 };
 
 export const login = (email, password) => {
-  return Axios.post(API_URL, {
+  return axios.post(API_URL, {
     email,
     password,
   });
 };
 
 export  const getallRegister = () => {
-  return Axios.get(API_URL);
+  return axios.get(API_URL);
 };  
 
 console.log(register);

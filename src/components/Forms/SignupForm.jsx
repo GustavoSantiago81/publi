@@ -3,7 +3,7 @@ import * as Yup from "yup";
 import { Button, Select, TextField } from "@mui/material";
 import MenuItem from "@mui/material/MenuItem";
 import InputLabel from "@mui/material/InputLabel";
-import Axios from "axios";
+import axios from "axios";
 import React from 'react';
 import { useState } from "react";
 import BasicModal from "../Modal/BasicModal";
@@ -53,7 +53,7 @@ function SignupForm() {
       onSubmit={(values) => {
         console.log(values);
         // Send data to the API
-        Axios.post("http://api.teste-frontend.ateliedepropaganda.com.br/v1/register", {
+        axios.post("http://api.teste-frontend.ateliedepropaganda.com.br/v1/register", {
           name: values.name,
           email: values.email,
           tax_id: values.tax_id,
