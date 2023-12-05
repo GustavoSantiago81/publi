@@ -34,7 +34,7 @@ function LoginForm() {
             values,
           )
             .then((response) => {
-              if (response.status === 200 && response.data.length > 0) {
+              if (response.status === 201 && response.data.length > 0) {
                 changeProp()
               } else {
                 console.log('Usuário não encontrado')
