@@ -1,4 +1,3 @@
-// LoginForm.js
 import * as React from 'react'
 import { Formik, Form, Field } from 'formik'
 import * as Yup from 'yup'
@@ -31,11 +30,15 @@ function LoginForm() {
         validationSchema={LoginSchema}
         onSubmit={(values) => {
           Axios.post(
-            'http://api.teste-frontend.ateliedepropaganda.com.br/v1/register',
+            'http://localhost:5000/login',
             values,
           )
             .then((response) => {
-              response.status === 200 ? changeProp() : console.log('nao foi')
+              if (response.status === 200 && response.data.length > 0) {
+                changeProp()
+              } else {
+                console.log('Usuário não encontrado')
+              }
             })
             .catch((error) => {
               console.log(error.response)
@@ -51,7 +54,7 @@ function LoginForm() {
               variant="standard"
               name="tax_id"
               as={TextField}
-              label="CPF/CNPJ"
+              label="Digite seu CPF"
               error={touched.tax_id && Boolean(errors.tax_id)}
               helperText={touched.tax_id && errors.tax_id}
               fullWidth
@@ -63,7 +66,7 @@ function LoginForm() {
               variant="standard"
               name="password"
               as={TextField}
-              label="Senha"
+              label="Digite sua senha"
               error={touched.password && Boolean(errors.password)}
               helperText={touched.password && errors.password}
               fullWidth
@@ -73,9 +76,9 @@ function LoginForm() {
               type="submit"
               variant="contained"
               color="primary"
-              style={{ marginTop: '20px' }}
+              style={{ marginTop: '20px' , marginBottom: '20px'}}
             >
-              Login
+              Entrar
             </Button>
           </Form>
         )}
