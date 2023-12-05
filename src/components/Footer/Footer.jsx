@@ -43,6 +43,7 @@ function Footer() {
                 fontSize: "20px",
                 display: "flex",
                 width: "100%",
+                fontFamily: "fonteBlack"
               }}
             >
               SÓ QUEM VENDE CURTE AS EXPERIÊNCIAS MAIS DIFERENTONAS!
