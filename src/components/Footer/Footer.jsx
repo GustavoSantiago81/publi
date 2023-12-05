@@ -19,10 +19,10 @@ function Footer() {
         justifyContent: 'center',
       }}
     >
-      <Grid container spacing={2} columns={16}>
+      <Grid container spacing={2} columns={12}>
         <Grid
           item
-          xs={8}
+          xs={12}
           style={{
             display: 'flex',
             justifyContent: 'center',
@@ -35,7 +35,7 @@ function Footer() {
         </Grid>
         <Grid
           item
-          xs={8}
+          xs={12}
           style={{ display: 'flex', justifyContent: 'center', padding: '50px' }}
         >
           <Item>

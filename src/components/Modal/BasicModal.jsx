@@ -14,18 +14,7 @@ const style = {
 };
 
 export default function BasicModel({open, setOpen}) {
-<<<<<<< HEAD
-  // const [open, setOpen] = React.useState(false);
-  // const handleOpen = () => setOpen(true);
-  const handleClose = () => {
-  setOpen(false); 
-  console.log("dentro do close")
-};
-  // modal
-  console.log(open + " estamos dentro do modal")
-=======
   const handleClose = () => setOpen(false);
->>>>>>> 533edcf2d800cd3868449b2958760d6c5f3dd2c7
 
   return (
     <Modal
